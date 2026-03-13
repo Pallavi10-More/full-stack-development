@@ -1,0 +1,132 @@
+:root {
+    --primary: #100817;
+    /* rich purple */
+    --accent: #CDA4FF;
+    /* soft lavender accent */
+    --muted: #7d6b8a;
+    /* muted purple-gray */
+    --bg: #fbf8ff;
+    /* very light lavender background */
+    --card-bg: #ffffff;
+    /* card background */
+    --overlay: rgba(9, 6, 23, 0.45);
+}
+
+body {
+    background-color: var(--bg);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* Navbar */
+.navbar-custom {
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link,
+.navbar-custom span {
+    color: #000000 !important;
+}
+
+.navbar-custom .nav-link:hover {
+    color: var(--accent) !important;
+}
+
+/* Hero (welcome) */
+.hero {
+    background-image: url('https://img.freepik.com/free-photo/stunning-barefooted-woman-trendy-fur-coat-dancing-laughing-photoshoot_197531-7073.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--overlay);
+    z-index: 0;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Buttons */
+.btn-hero {
+    background-color: var(--accent);
+    color: var(--primary);
+    border: none;
+}
+
+.btn-hero:hover {
+    background-color: #b88bff;
+}
+
+.btn-cart {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+}
+
+.btn-cart:hover {
+    background: #3e1c5d;
+}
+
+/* Cards: equal height and light look */
+.card-img-top {
+    height: 260px;
+    object-fit: contain;
+    background-color: var(--card-bg);
+    filter: brightness(1.05) contrast(0.98) saturate(1.02);
+}
+
+.row#product-list>.col-md-4 {
+    display: flex;
+}
+
+.row#product-list .card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    background: var(--card-bg);
+    border: 0;
+    box-shadow: 0 6px 18px rgba(91, 42, 134, 0.08);
+    transition: transform 0.25s;
+}
+
+.row#product-list .card:hover {
+    transform: translateY(-6px);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.card-title {
+    color: var(--primary);
+}
+
+.card-text {
+    color: var(--muted);
+}
+
+/* Footer */
+footer {
+    background: var(--primary);
+    color: #fff;
+}
+
+/* small responsive tweaks */
+@media (max-width: 767px) {
+    .card-img-top {
+        height: 220px;
+    }
+}
