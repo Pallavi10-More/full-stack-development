@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # =========================
 # Dependencies
 # =========================
@@ -38,3 +39,9 @@ Thumbs.db
 # React Cache (optional)
 # =========================
 frontend/build/
+=======
+node_modules/
+.env
+dist/
+build/
+>>>>>>> 4e1678c (Cleaned node_modules and added gitignore)
