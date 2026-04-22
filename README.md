@@ -126,6 +126,5 @@ npm start
 
 * Appointment Booking / Used Items Portal
 
----
 
 👨‍💻 Developed as part of Full Stack Development coursework.
